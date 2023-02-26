@@ -1,0 +1,150 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"<Plugins--------------------------------
+set surround
+
+set multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xma <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+set argtextobj
+
+set highlightedyank
+let g:highlightedyank_highlight_duration = "5000"
+let g:highlightedyank_highlight_color = "rgba(57, 62, 65, 255)"
+
+set textobj-entire
+
+set ReplaceWithRegister
+
+set exchange
+
+set ideajoin
+
+set NERDTree
+
+set textobj-indent
+
+set matchit
+
+set vim-paragraph-motion
+
+set commentary
+
+"--------------------------------Plugins>
+
+"<Leader mappings--------------------------------
+let mapleader = " "
+nmap <leader>e <Action>(EditSourceInNewWindow)
+nmap <leader>w <Action>(HideAllWindows)
+
+nmap <leader>st <Action>(FileStructurePopup)
+nmap <leader>sp <Action>(SelectInProjectView)
+nmap <leader>sf <Action>(RevealIn)
+nmap <leader>ss <Action>(ShowNavBar)
+nmap <leader>sm <Action>(ShowTypeBookmarks)
+nmap <leader>sb <Action>(ShowBookmarks)
+nmap <leader>sh <Action>(LocalHistory.ShowHistory)
+
+
+nmap <leader>b <Action>(ToggleBookmark)
+nmap <leader>m <Action>(ToggleBookmarkWithMnemonic)
+
+nmap <leader>q <Action>(CloseAllEditorsButActive)
+
+nmap <leader>hu <Action>(Vcs.RollbackChangedLines)
+nmap <leader>hp <Action>(VcsShowCurrentChangeMarker)
+nmap <leader>hs <Action>(ChangesView.AddUnversioned)
+
+nmap <leader>v <Action>(Git.Menu)
+
+nmap <leader>ce <Action>(CopyElement)
+
+nmap <leader>ne <Action>(NewElement)
+
+nmap <leader>rf <Action>(RenameFile)
+
+
+nmap <leader>fg <Action>(flutter.pub.get)
+nmap <leader>fc <Action>(flutter.clean)
+
+"--------------------------------Leader mappings>
+
+"<Suggested options--------------------------------
+
+" show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=10
+set scroll=10
+set relativenumber
+set number
+set ignorecase
+set smartcase
+set hlsearch
+" do incremental searching.
+set incsearch
+set showmode
+
+"--------------------------------Suggested options>
+
+
+"<My Mappings-----------------------------
+" remove search highlight
+nmap ?? :noh <CR>
+
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPreviousError)
+
+
+nmap ]c <Action>(VcsShowNextChangeMarker)
+nmap [c <Action>(VcsShowPrevChangeMarker)
+
+nmap ]b <Action>(GotoNextBookmark)
+nmap [b <Action>(GotoPreviousBookmark)
+
+" quick move in insert mode
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-h> <Left>
+imap <C-l> <Right>
+
+" move between split windows
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" use \ to show current file change
+nmap \| <Action>(Git.Stage.Compare.Local.Staged)
+
+nmap <S-l> <Action>(NextTab)
+nmap <S-h> <Action>(PreviousTab)
+nmap <S-q> :q<CR>
+
+
+nmap sh :split <CR>
+nmap sH <Action>(MoveTabDown)
+nmap sv :vsplit <CR>
+nmap sV <Action>(MoveTabRight)
+nmap ss <Action>(MoveEditorToOppositeTabGroup)
+
+" <C-w>o to use vim :only command
+nmap so <Action>(MaximizeEditorInSplit)
+
+" disable s key
+nmap s <Nop>
+
+nmap gi <Action>(GotoImplementation)
+nmap gs <Action>(GotoSuperMethod)
+nmap gh <Action>(ShowErrorDescription)
+nmap gu <Action>(FindUsages)
+
+"-----------------------------My Mappings>
+
+" ideaVim development stuff
+set ideastrictmode
