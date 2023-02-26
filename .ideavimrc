@@ -73,6 +73,7 @@ nmap <leader>rf <Action>(RenameFile)
 nmap <leader>fg <Action>(flutter.pub.get)
 nmap <leader>fc <Action>(flutter.clean)
 
+
 "--------------------------------Leader mappings>
 
 "<Suggested options--------------------------------
@@ -143,6 +144,11 @@ nmap gi <Action>(GotoImplementation)
 nmap gs <Action>(GotoSuperMethod)
 nmap gh <Action>(ShowErrorDescription)
 nmap gu <Action>(FindUsages)
+
+nmap gk <Action>(QuickImplementations)
+
+vmap <CR> <Action>(ReformatCode)
+nmap <CR> <Action>(ShowReformatFileDialog)
 
 "-----------------------------My Mappings>
 
