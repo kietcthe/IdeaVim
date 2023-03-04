@@ -73,7 +73,6 @@ nmap <leader>rf <Action>(RenameFile)
 nmap <leader>fg <Action>(flutter.pub.get)
 nmap <leader>fc <Action>(flutter.clean)
 
-
 "--------------------------------Leader mappings>
 
 "<Suggested options--------------------------------
@@ -149,6 +148,9 @@ nmap gk <Action>(QuickImplementations)
 
 vmap <CR> <Action>(ReformatCode)
 nmap <CR> <Action>(ShowReformatFileDialog)
+
+vmap <S-J> <Action>(MoveLineDown)
+vmap <S-K> <Action>(MoveLineUp)
 
 "-----------------------------My Mappings>
 
