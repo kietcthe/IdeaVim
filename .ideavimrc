@@ -51,6 +51,10 @@ nmap <leader>sm <Action>(ShowTypeBookmarks)
 nmap <leader>sb <Action>(ShowBookmarks)
 nmap <leader>sh <Action>(LocalHistory.ShowHistory)
 
+// chatGPT
+vmap <leader>si <Action>(ee.carlrobert.chatgpt.ide.action.ActionGroup)
+nmap <leader>si <Action>(ee.carlrobert.chatgpt.ide.action.ActionGroup)
+
 
 nmap <leader>b <Action>(ToggleBookmark)
 nmap <leader>m <Action>(ToggleBookmarkWithMnemonic)
@@ -72,6 +76,8 @@ nmap <leader>rf <Action>(RenameFile)
 
 nmap <leader>fg <Action>(flutter.pub.get)
 nmap <leader>fc <Action>(flutter.clean)
+
+imap <C-\> <Action>(CodeCompletion)
 
 "--------------------------------Leader mappings>
 
@@ -151,6 +157,9 @@ nmap <CR> <Action>(ShowReformatFileDialog)
 
 vmap <S-J> <Action>(MoveLineDown)
 vmap <S-K> <Action>(MoveLineUp)
+
+nnoremap <Leader>yy ^yg_
+nnoremap <Leader>vv ^vg_
 
 "-----------------------------My Mappings>
 
